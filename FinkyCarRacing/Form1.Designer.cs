@@ -42,6 +42,11 @@ namespace FinkyCarRacing
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.over = new System.Windows.Forms.Label();
+            this.coin1 = new System.Windows.Forms.PictureBox();
+            this.coin2 = new System.Windows.Forms.PictureBox();
+            this.coin3 = new System.Windows.Forms.PictureBox();
+            this.coin4 = new System.Windows.Forms.PictureBox();
+            this.coins = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
@@ -52,6 +57,10 @@ namespace FinkyCarRacing
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -65,7 +74,7 @@ namespace FinkyCarRacing
             this.enemy2.Image = global::FinkyCarRacing.Properties.Resources.carPink;
             this.enemy2.Location = new System.Drawing.Point(210, 57);
             this.enemy2.Name = "enemy2";
-            this.enemy2.Size = new System.Drawing.Size(61, 35);
+            this.enemy2.Size = new System.Drawing.Size(37, 35);
             this.enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enemy2.TabIndex = 10;
             this.enemy2.TabStop = false;
@@ -76,7 +85,7 @@ namespace FinkyCarRacing
             this.enemy3.Image = global::FinkyCarRacing.Properties.Resources.carGrey;
             this.enemy3.Location = new System.Drawing.Point(311, 117);
             this.enemy3.Name = "enemy3";
-            this.enemy3.Size = new System.Drawing.Size(61, 35);
+            this.enemy3.Size = new System.Drawing.Size(37, 35);
             this.enemy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enemy3.TabIndex = 8;
             this.enemy3.TabStop = false;
@@ -86,7 +95,7 @@ namespace FinkyCarRacing
             this.enemy1.Image = global::FinkyCarRacing.Properties.Resources.carGreen;
             this.enemy1.Location = new System.Drawing.Point(12, 117);
             this.enemy1.Name = "enemy1";
-            this.enemy1.Size = new System.Drawing.Size(61, 35);
+            this.enemy1.Size = new System.Drawing.Size(37, 35);
             this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enemy1.TabIndex = 7;
             this.enemy1.TabStop = false;
@@ -97,7 +106,7 @@ namespace FinkyCarRacing
             this.Car.Image = global::FinkyCarRacing.Properties.Resources.carYellow;
             this.Car.Location = new System.Drawing.Point(118, 307);
             this.Car.Name = "Car";
-            this.Car.Size = new System.Drawing.Size(61, 35);
+            this.Car.Size = new System.Drawing.Size(40, 35);
             this.Car.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Car.TabIndex = 6;
             this.Car.TabStop = false;
@@ -168,12 +177,68 @@ namespace FinkyCarRacing
             this.over.TabIndex = 11;
             this.over.Text = "GameOver";
             // 
+            // coin1
+            // 
+            this.coin1.Image = global::FinkyCarRacing.Properties.Resources.coin1;
+            this.coin1.Location = new System.Drawing.Point(262, 321);
+            this.coin1.Name = "coin1";
+            this.coin1.Size = new System.Drawing.Size(25, 25);
+            this.coin1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin1.TabIndex = 12;
+            this.coin1.TabStop = false;
+            // 
+            // coin2
+            // 
+            this.coin2.Image = global::FinkyCarRacing.Properties.Resources.coin1;
+            this.coin2.Location = new System.Drawing.Point(99, 203);
+            this.coin2.Name = "coin2";
+            this.coin2.Size = new System.Drawing.Size(25, 25);
+            this.coin2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin2.TabIndex = 13;
+            this.coin2.TabStop = false;
+            // 
+            // coin3
+            // 
+            this.coin3.Image = global::FinkyCarRacing.Properties.Resources.coin1;
+            this.coin3.Location = new System.Drawing.Point(323, 57);
+            this.coin3.Name = "coin3";
+            this.coin3.Size = new System.Drawing.Size(25, 25);
+            this.coin3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin3.TabIndex = 14;
+            this.coin3.TabStop = false;
+            // 
+            // coin4
+            // 
+            this.coin4.Image = global::FinkyCarRacing.Properties.Resources.coin1;
+            this.coin4.Location = new System.Drawing.Point(132, 117);
+            this.coin4.Name = "coin4";
+            this.coin4.Size = new System.Drawing.Size(25, 25);
+            this.coin4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin4.TabIndex = 15;
+            this.coin4.TabStop = false;
+            // 
+            // coins
+            // 
+            this.coins.AutoSize = true;
+            this.coins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coins.ForeColor = System.Drawing.Color.Gold;
+            this.coins.Location = new System.Drawing.Point(15, 9);
+            this.coins.Name = "coins";
+            this.coins.Size = new System.Drawing.Size(66, 20);
+            this.coins.TabIndex = 16;
+            this.coins.Text = "coins:0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.coins);
+            this.Controls.Add(this.coin4);
+            this.Controls.Add(this.coin3);
+            this.Controls.Add(this.coin2);
+            this.Controls.Add(this.coin1);
             this.Controls.Add(this.over);
             this.Controls.Add(this.enemy2);
             this.Controls.Add(this.enemy3);
@@ -199,6 +264,10 @@ namespace FinkyCarRacing
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,6 +287,11 @@ namespace FinkyCarRacing
         private System.Windows.Forms.PictureBox enemy3;
         private System.Windows.Forms.PictureBox enemy2;
         private System.Windows.Forms.Label over;
+        private System.Windows.Forms.PictureBox coin1;
+        private System.Windows.Forms.PictureBox coin2;
+        private System.Windows.Forms.PictureBox coin3;
+        private System.Windows.Forms.PictureBox coin4;
+        private System.Windows.Forms.Label coins;
     }
 }
 

@@ -23,12 +23,13 @@ namespace FinkyCarRacing
             moveline(5);
             enemy(5);
             gameover();
-            
-
-
-
-
+            Coins(5);
+            coinscollection();
         }
+
+        int collectedcoin = 0;
+
+
         Random r = new Random();
         int x, y;
         void enemy(int speed)
@@ -58,6 +59,40 @@ namespace FinkyCarRacing
 
         }
 
+        void  Coins(int speed)
+        {
+            if (coin1.Top >= 380)
+            {
+                x = r.Next(0, 200);
+                coin1.Location = new Point(x, 0);
+            }
+            else { coin1.Top += speed; }
+
+            if (coin2.Top >= 380)
+            {
+                x = r.Next(0, 400);
+                coin2.Location = new Point(x, 0);
+            }
+            else { coin2.Top += speed; }
+
+
+            if (coin3.Top >= 380)
+            {
+                x = r.Next(200, 350);
+                coin3.Location = new Point(x, 0);
+            }
+            else { coin3.Top += speed; }
+
+            if (coin4.Top >= 380)
+            {
+                x = r.Next(200, 350);
+                coin4.Location = new Point(x, 0);
+            }
+            else { coin4.Top += speed; }
+
+
+
+        }
 
         void gameover()
         {
@@ -96,6 +131,41 @@ namespace FinkyCarRacing
             if (pictureBox4.Top >= 380)
             { pictureBox4.Top = 0; }
             else { pictureBox4.Top += speed; }
+        }
+
+        void coinscollection()
+        {
+            if (Car.Bounds.IntersectsWith(coin1.Bounds))
+            {
+                collectedcoin++;
+                coins.Text = "Coins" + collectedcoin.ToString();
+                x = r.Next(200, 350);
+                coin1.Location = new Point(x, 0);
+            }
+
+            if (Car.Bounds.IntersectsWith(coin2.Bounds))
+            {
+                collectedcoin++;
+                coins.Text = "Coins" + collectedcoin.ToString();
+                x = r.Next(50, 200);
+                coin2.Location = new Point(x, 0);
+            }
+
+            if (Car.Bounds.IntersectsWith(coin3.Bounds))
+            {
+                collectedcoin++;
+                coins.Text = "Coins" + collectedcoin.ToString();
+                x = r.Next(200, 200);
+                coin3.Location = new Point(x, 0);
+
+                if (Car.Bounds.IntersectsWith(coin4.Bounds))
+                {
+                    collectedcoin++;
+                    coins.Text = "Coins" + collectedcoin.ToString();
+                    x = r.Next(0,400 );
+                    coin4.Location = new Point(x, 0);
+                }
+            }
         }
         int gamespeed = 0;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
